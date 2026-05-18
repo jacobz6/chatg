@@ -44,21 +44,7 @@ label main_menu:
     return
 
 label start:
-    $ chapter = 1
-    $ trust = 0
-    $ insight = 0
-    $ responsibility = 0
-    $ discovered_clues = []
-    $ helped_student = False
-    $ ignored_warning = False
-    $ crossed_boundary = False
-    $ told_truth = False
-    $ chose_institution = False
-    $ dialogue_history = []
-    $ student_pool = []
-    $ current_student = None
-
-    call chapter1_start
+    call chapter1_start from _call_chapter1_start
 
     if chapter1_completed:
         jump chapter2_start
