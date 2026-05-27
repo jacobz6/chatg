@@ -203,15 +203,22 @@ init python:
             else:
                 renpy.show(img_name, at_list=[char_left(z=use_zoom)], with_none=True)
     
-    def hide_char(char_name, transition="dissolve"):
+    def hide_char(char_name, expression=None, transition="dissolve"):
         """
         隐藏角色立绘
         
         参数:
             char_name: 角色名称
+            expression: 表情（可选，不指定则隐藏该角色所有表情）
             transition: 过渡效果
         """
-        img_name = f"{char_name}_"
+        if expression is None:
+            # 不指定表情时，隐藏该角色所有立绘
+            img_name = f"{char_name}_"
+        else:
+            # 指定表情时，只隐藏特定表情
+            img_name = f"{char_name}_{expression}"
+        
         if transition == "dissolve":
             renpy.hide(img_name)
         else:
