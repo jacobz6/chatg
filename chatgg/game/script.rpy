@@ -51,13 +51,9 @@ label start:
 
     return
 
-label chapter2_start:
-    scene black with fade
-    narrator "【第二章 · 暗流涌动 — 施工中】"
-    narrator "感谢游玩第一章！"
-    return
-
 label chapter3_start:
     scene black with fade
     narrator "【第三章 · 终章 — 施工中】"
     return
+
+
